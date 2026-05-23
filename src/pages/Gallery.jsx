@@ -125,7 +125,7 @@ export default function Gallery() {
       {/* Navbar */}
       <nav style={s.nav}>
         <div style={s.navLeft}>
-          <span style={s.navLogo} onClick={() => navigate("/dashboard")}>⬡ AuthApp</span>
+          <span style={s.navLogo} onClick={() => navigate("/dashboard")}>⬡ Celebrare</span>
           <span style={s.navSep}>/</span>
           <span style={s.navCurrent}>Gallery</span>
         </div>
