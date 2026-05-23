@@ -5,12 +5,11 @@ export function saveUser(user) {
   const payload = {
     name: user.displayName,
     email: user.email,
-    photo: user.photoURL,
+    photo: user.photoURL ? user.photoURL.split('=')[0] + '=s96-c' : null,
     expiry: Date.now() + TTL_MS,
   };
   localStorage.setItem(AUTH_KEY, JSON.stringify(payload));
 }
-
 export function loadUser() {
   const raw = localStorage.getItem(AUTH_KEY);
   if (!raw) return null;
